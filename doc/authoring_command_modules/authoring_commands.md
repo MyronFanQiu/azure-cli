@@ -806,7 +806,7 @@ def validate_my_arg(cmd, namespace):
       ...
 ```
 
-Validators are executed after argument parsing, and thus after the native argparse-supported `type` and `action` have been applied. A CLIError raised during a validator execution will be treated as a validation error, which will result in the display of the command usage string, as opposed to the same error raised within a custom command, which will just print the error and no validation string.
+Validators are executed after argument parsing, and thus after the native argparse-supported `type`, `nargs`, `id_part` and `action` have been applied. A CLIError raised during a validator execution will be treated as a validation error, which will result in the display of the command usage string, as opposed to the same error raised within a custom command, which will just print the error and no validation string.
 
 ***Command Validators***
 The `validator` keyword applies to commands and arguments. A command can have, at most, one validator. If supplied, then *only* this validator will be executed. Any argument-level validators will be ignored. The reason to use a command validator is if the validation sequence is important.  However, the command validator can and very often is composed to individual argument level validators. You simply define the sequence in which they execute.
