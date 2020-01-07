@@ -80,6 +80,22 @@ class ResourceType(Enum):  # pylint: disable=too-few-public-methods
     ...
 ```
 
+```Python
+operation_group
+C:\Codes\code-gen\azure-cli\src\azure-cli-core\azure\cli\core\profiles\_shared.py
+ResourceType.MGMT_COMPUTE: SDKProfile('2019-07-01', {
+    'resource_skus': '2019-04-01',
+    'disks': '2019-07-01',
+    'snapshots': '2019-07-01',
+    'galleries': '2019-07-01'
+})
+C:\Codes\code-gen\azure-cli\src\azure-cli\azure\cli\command_modules\vm\__init__.py
+super(ComputeCommandsLoader, self).__init__(cli_ctx=cli_ctx,
+                                            resource_type=ResourceType.MGMT_COMPUTE,
+                                            operation_group='virtual_machines',
+                                            custom_command_type=compute_custom)
+```
+
 ## Write a Command
 
 Write your command as a simple function, specifying your arguments as the parameter names.
@@ -92,14 +108,19 @@ Avoid using a parameter name called `name` as this is a very common alias in the
 
 If you specify a default value in your function signature, this will flag the argument as optional and will automatically display the default value in the help text for the command. Any parameters that do not have a default value are required and will automatically appear in help with the [Required] label. The required and default behaviors for arguments can be overridden (see Argument Customization below) but this is not generally needed.
 
+```python
+c.argument('ip_addresses', required=False)
+```
+
 ***Special Arguments***
 
 There are two arguments you may include in your custom command that are reserved by the infrastructure and have special meaning.
 
 `cmd`: If used, this should be the first argument in your custom command, and allows you to access the command instance within your custom command. This will allow you to access the CLI context and numerous helper methods to make writing your command simpler, particularly when working with a multi-API style module.
 
-`client`: If your command has registered the `client_factory` keyword argument, that factory will be passed into this variable. It can appear anywhere in your command signature.
+![](/doc/assets/cmd-struture.png)
 
+`client`: If your command has registered the `client_factory` keyword argument, that factory will be passed into this variable. It can appear anywhere in your command signature.
 ## Register Commands
 
 Before your command can be used in the CLI, it must be registered. Within the `load_command_table` method of your command loader, you will have something like:
@@ -173,8 +194,10 @@ wait_command(self, name, getter_name='get', **kwargs)
 
 Since most wait commands rely on a simple GET call from the SDK, most of these entries simply look like:
 ```Python
-   g.wait_command('wait')
+g.wait_command('wait')
 ```
+
+`wait` command depends on response body instead of status code.
 
 ***custom_wait_command***
 
@@ -182,8 +205,8 @@ Similar to `custom_command` and `command`, the signature for `custom_wait_comman
 
 ***show_command***
 
-The generic show command ensures a consistent behavior when encountering a missing Azure resource. 
-With little exception, all `show` commands should be registered using this method or `custom_show_command` to ensure consistency.
+The generic show command ensures a consistent behavior **when encountering a missing Azure resource. 
+With little exception**, all `show` commands should be registered using this method or `custom_show_command` to ensure consistency.
 
 ```Python
 show_command(self, name, getter_name='get', **kwargs)
@@ -242,6 +265,18 @@ with self.command_group('mymod', mymod_sdk) as g:
     g.generic_update_command('update', supports_no_wait=True)
 ```
 
+
+```python
+C:\Codes\code-gen\azure-cli\src\azure-cli-core\azure\cli\core\commands\__init__.py
+if _is_poller(result):
+    result = LongRunningOperation(cmd_copy.cli_ctx, 'Starting {}'.format(cmd_copy.name))(result)
+elif _is_paged(result):
+    result = list(result)
+```
+```python
+plan_id = LongRunningOperation(cmd.cli_ctx)(
+    ddos_client.create_or_update(resource_group_name, ddos_plan_name, location=location, tags=tags)).id
+```
 **(5) Supporting --defer**
 
 When registering a command, the boolean `supports_local_cache` property can be used to specify that the command supports `--defer`. This will allow traditional GET and PUT requests to interact with the CLI's local object cache instead of making
@@ -287,6 +322,19 @@ While the CLI will attempt to figure out certain key properties of your command 
         c.argument('some_enum', arg_type=get_enum_type(MyEnum, default='foo'))
 ```
 
+```python
+C:\Codes\code-gen\azure-cli\src\azure-cli-core\azure\cli\core\__init__.py
+if command is None:
+    # load all arguments via reflection
+    for cmd in loader.command_table.values():
+        cmd.load_arguments()  # this loads the arguments via reflection
+    loader.skip_applicability = True
+    loader.load_arguments('')  # this adds entries to the argument registries
+else:
+    loader.command_name = command
+    self.command_table[command].load_arguments()  # this loads the arguments via reflection
+    loader.load_arguments(command)  # this adds entries to the argument registries
+```
 For more information:
 
 **(1) Create an argument context**
@@ -320,7 +368,7 @@ with self.argument_context('mypackage command1', ...) as c:  # applies to comman
 argument(self, dest, arg_type=None, **kwargs)
 ```
 - `dest` -  The name of the parameter that you are targeting.
-- `arg_type` - An instance of the `azure.cli.core.commands.CliArgumentType` class. This essentially serves as a named, reusable packaging of the `kwargs` that modify your command's argument. It is useful when you want to reuse an argument definition, but is generally not required. It is most commonly used for name type parameters, or for enums and flags.
+- `arg_type` - An instance of the `azure.cli.core.commands.CliArgumentType` class. This essentially serves as a **named, reusable packaging** of the `kwargs` that modify your command's argument. It is useful when you want to reuse an argument definition, but is generally not required. It is most commonly used for name type parameters, or for enums and flags.
 - `kwargs` - Most likely, you will simply specify keyword arguments that will accomplish what you need.  Any `kwargs` specified will override or extended the definition in `arg_type`, if provided.
 
 ***ignore***
@@ -332,9 +380,43 @@ ignore(self, *args)
 ***extra***
 ```Python
 extra(self, dest, arg_type=None, **kwargs)
+
 ```
 Arguments are the same as `argument`, however this will create a new parameter whereas `argument` will not. This is useful when a reflected SDK method is missing a parameter that you need to expose in your command.
 
+```python
+C:\Codes\code-gen\azure-cli\src\azure-cli\azure\cli\command_modules\servicebus\_params.py
+c.extra('vnet_name', arg_group='Virtual Network Rule', options_list=['--vnet-name'], help='Name of the Virtual Network')
+
+C:\Codes\code-gen\azure-cli\src\azure-cli\azure\cli\command_modules\servicebus\commands.py
+with self.command_group('servicebus namespace network-rule', sb_namespace_util, client_factory=namespaces_mgmt_client_factory) as g:
+    g.custom_command('add', 'cli_networkrule_createupdate', validator=validate_subnet)
+
+C:\Codes\code-gen\azure-cli\src\azure-cli\azure\cli\command_modules\servicebus\_validators.py
+# Validates if a subnet id or name have been given by the user. If subnet id is given, vnet-name should not be provided.
+def validate_subnet(cmd, namespace):
+    from msrestazure.tools import resource_id, is_valid_resource_id
+    from azure.cli.core.commands.client_factory import get_subscription_id
+
+    subnet = namespace.subnet
+    subnet_is_id = is_valid_resource_id(subnet)
+    vnet = namespace.vnet_name
+
+    if (subnet_is_id and not vnet) or (not subnet and not vnet):
+        pass
+    elif subnet and not subnet_is_id and vnet:
+        namespace.subnet = resource_id(
+            subscription=get_subscription_id(cmd.cli_ctx),
+            resource_group=namespace.resource_group_name,
+            namespace='Microsoft.Network',
+            type='virtualNetworks',
+            name=vnet,
+            child_type_1='subnets',
+            child_name_1=subnet)
+    else:
+        raise CLIError('incorrect usage: [--subnet ID | --subnet NAME --vnet-name NAME]')
+    delattr(namespace, 'vnet_name')
+```
 Additional Topics
 =============================
 
@@ -360,7 +442,7 @@ The following special kwargs are supported by command group and its helper metho
 - `table_transformer` - See section on [Custom Table Formats](#custom-table-formats)
 - `validator` - See section on [Validators](#validators)
 - `confirmation` - During interactive use, will prompt the user to confirm their choice to proceed. Supply a value of True to use the default prompt, or supply a string to use a custom prompt message. If the command is invoked in non-interactive scenarios and the --yes/-y parameter is not supplied, the command will fail.
-- `transform` - Accepts a callable that takes a command result, which can be manipulated as desired. The transformed result is then returned. In general, output formats should closely mirror those returned by the service, and so this should be infrequently used. The modifies the output *regardless of the output format type*.
+- `transform` - Accepts a callable that takes a command result, which can be manipulated as desired. The transformed result is then returned. In general, output formats should closely mirror those returned by the service, and so this should be infrequently used. The modifies the output **regardless of the output format type**. It's called before `table_transformer`.
 - `deprecate_info` - See [Deprecating Commands and Arugments](https://github.com/Azure/azure-cli/blob/dev/doc/authoring_command_modules/authoring_commands.md#deprecating-commands-and-arguments)
 - `formatter_class` - Advanced. Accepts a custom class that derives from `argparse.HelpFormatter` to modify the help document generation.
 - `argument_loader` - Advanced. Accepts a callable that takes no parameters which will be used in place of the default argument loader.
@@ -375,7 +457,7 @@ The following kwargs may be inherited from the command loader:
 - `resource_type` - An `azure.cli.core.profiles.ResourceType` enum value that is used for multi-API packages.
 - `operation_group` - Only used by the `azure-cli-vm` module to specify which resource API to target.
 - `command_group` - A `CliCommandType` object that contains a bundle of kwargs that will be used by the `command` method if not otherwise provided.
-- `custom_command_group` - A `CliCommandType` object that contains a bundle of kwargs that will be used by the `custom_command` method if not otherwise provided.
+- `custom_command_group` - A `CliCommandType` object that contains a bundle of kwargs that will be used by the `custom_command` method if not otherwise provided. Currently, this is not used.
 
 ****Argument Context****
 
@@ -383,6 +465,7 @@ _Special Kwargs_
 
 The follow special kwargs are supported by argument context and its helper methods:
 - `options_list` - By default, your argument will be exposed as an option in hyphenated form (ex: `my_param` becomes `--my-param`). If you would like to change the option string without changing the parameter name, and/or add a short option, specify the `options_list` kwarg. This is a list of string values. If there will only be one value, you can just specify the value (Ex: `options_list=['--myparam', '-m']` or `options_list='--myparam'`)
+. `options_list=('--myparam', '-m')`. iterable.
 - `validator` - See section on [Validators](#validators)
 - `completer` - See section on [Tab Completion](#tab-completion)
 - `id_part` - See section on [Supporting the IDs Parameter](#supporting-the-ids-parameter).
@@ -391,7 +474,18 @@ The follow special kwargs are supported by argument context and its helper metho
 
 Additionally, the following `kwargs`, supported by argparse, are supported as well:
 - `nargs` - See https://docs.python.org/3/library/argparse.html#nargs
+```python
+c.argument('myparam', nargs='+')
+--myparam param1 param2
+```
 - `action` - See https://docs.python.org/3/library/argparse.html#action
+```python
+c.argument('myparam', action='store_true')
+```
+```python
+c.argument('myparam', action='append')
+--myparam param1 --myparam param2
+```
 - `const` - See https://docs.python.org/3/library/argparse.html#const
 - `default` - See https://docs.python.org/3/library/argparse.html#default. Note that the default value is inferred from the parameter's default value in the function signature. If specified, this will override that value.
 - `type` - See https://docs.python.org/3/library/argparse.html#type
@@ -498,6 +592,12 @@ A couple things to note:
 with self.argument_context('parent child') as c:
   c.argument('parent_name', id_part=None)  # This should ALWAYS be the id_part that was 'name'.
   c.argument('child_name', ...)
+```
+- `id_part=name` or `id_part='resource_name` must be supported.
+```python
+C:\Codes\code-gen\azure-cli\src\azure-cli-core\azure\cli\core\commands\arm.py
+if 'name' not in id_parts and 'resource_name' not in id_parts:
+    continue
 ```
 
 ## Supporting Name or ID Parameters
