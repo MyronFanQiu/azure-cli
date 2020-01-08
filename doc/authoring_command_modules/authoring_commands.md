@@ -415,7 +415,17 @@ def validate_subnet(cmd, namespace):
             child_name_1=subnet)
     else:
         raise CLIError('incorrect usage: [--subnet ID | --subnet NAME --vnet-name NAME]')
-    delattr(namespace, 'vnet_name')
+    del namespace.vnet_name
+```
+
+***positional***
+
+```python
+with self.argument_context('acr helm show') as c:
+    c.positional('chart', help='The helm chart name.')
+
+with self.argument_context('find') as c:
+    c.positional('cli_term', help='An Azure CLI command or group for which you need an example.')
 ```
 Additional Topics
 =============================
@@ -814,6 +824,47 @@ The `validator` keyword applies to commands and arguments. A command can have, a
 ***Argument Validators***
 An argument can be assigned, at most, one validator. However, since a command can have many arguments, this means that a command can have many argument validators. Furthermore, since an argument context may apply to many commands, this means that this argument validator can be reused across many commands. At execution time, argument validators are executed *in random order*, so you should ensure you do not have dependencies between validators. If you do, the a command validator is the appropriate route to take. It is fine to have an argument validator involve several parameters as long as they are interdependent (for example, a validator involving a vnet name and subnet name).
 
+```python
+def get_vnet_validator(dest):
+    from msrestazure.tools import is_valid_resource_id, resource_id
+
+    def _validate_vnet_name_or_id(cmd, namespace):
+        SubResource = cmd.get_models('SubResource')
+        subscription_id = get_subscription_id(cmd.cli_ctx)
+
+        resource_group = namespace.resource_group_name
+        names_or_ids = getattr(namespace, dest)
+        ids = []
+
+        if names_or_ids == [''] or not names_or_ids:
+            return
+
+        for val in names_or_ids:
+            if not is_valid_resource_id(val):
+                val = resource_id(
+                    subscription=subscription_id,
+                    resource_group=resource_group,
+                    namespace='Microsoft.Network', type='virtualNetworks',
+                    name=val
+                )
+            ids.append(SubResource(id=val))
+        setattr(namespace, dest, ids)
+
+    return _validate_vnet_name_or_id
+
+
+def validate_ddos_name_or_id(cmd, namespace):
+
+    if namespace.ddos_protection_plan:
+        from msrestazure.tools import is_valid_resource_id, resource_id
+        if not is_valid_resource_id(namespace.ddos_protection_plan):
+            namespace.ddos_protection_plan = resource_id(
+                subscription=get_subscription_id(cmd.cli_ctx),
+                resource_group=namespace.resource_group_name,
+                namespace='Microsoft.Network', type='ddosProtectionPlans',
+                name=namespace.ddos_protection_plan
+            )
+```
 ## Registering Flags
 
 The recommended way to register boolean properties in the CLI is using the `get_three_state_flag` arg_type.
