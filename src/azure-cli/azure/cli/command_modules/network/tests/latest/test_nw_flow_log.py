@@ -19,7 +19,7 @@ class NWFlowLogScenarioTest(ScenarioTest):
             'watcher_rg': 'NetworkWatcherRG',
             'watcher_name': 'NetworkWatcher_{}'.format(resource_group_location),
             'flow_log': 'flow_log_test',
-            'workspace': 'workspace0424',
+            'workspace': self.create_random_name('clitest', 20),
         })
 
         # enable network watcher
@@ -68,7 +68,7 @@ class NWFlowLogScenarioTest(ScenarioTest):
             'watcher_rg': 'NetworkWatcherRG',
             'watcher_name': 'NetworkWatcher_{}'.format(resource_group_location),
             'flow_log': 'flow_log_test2',
-            'workspace': 'workspace0422',
+            'workspace': self.create_random_name('clitest', 20),
         })
 
         # enable network watcher
@@ -122,7 +122,7 @@ class NWFlowLogScenarioTest(ScenarioTest):
             'watcher_rg': 'NetworkWatcherRG',
             'watcher_name': 'NetworkWatcher_{}'.format(resource_group_location),
             'flow_log': 'flow_log_test2',
-            'workspace': 'workspace0421',
+            'workspace': 'clitest20200403',
         })
 
         # enable network watcher
@@ -186,7 +186,7 @@ class NWFlowLogScenarioTest(ScenarioTest):
             'watcher_rg': 'NetworkWatcherRG',
             'watcher_name': 'NetworkWatcher_{}'.format(resource_group_location),
             'flow_log': 'flow_log_test2',
-            'workspace': 'workspace0895',
+            'workspace': self.create_random_name('clitest', 20),
         })
 
         # enable network watcher
@@ -201,7 +201,8 @@ class NWFlowLogScenarioTest(ScenarioTest):
         # prepare another storage account in another resource group
         storage_info = self.cmd('storage account create '
                                 '--resource-group {rg} '
-                                '--name {storage_account_2} ').get_output_in_json()
+                                '--name {storage_account_2} '
+                                '--https-only').get_output_in_json()
         self.kwargs.update({
             'another_storage': storage_info['id']
         })
