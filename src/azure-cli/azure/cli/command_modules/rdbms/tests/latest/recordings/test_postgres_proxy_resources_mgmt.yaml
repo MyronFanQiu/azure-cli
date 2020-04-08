@@ -1510,7 +1510,7 @@ interactions:
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"name\": \"clitestvnet\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet\",\r\n
@@ -1533,7 +1533,7 @@ interactions:
       azure-asyncnotification:
       - Enabled
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/9af54070-924d-4b8c-914a-ab42dffe1d29?api-version=2019-11-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/9af54070-924d-4b8c-914a-ab42dffe1d29?api-version=2020-03-01
       cache-control:
       - no-cache
       content-length:
@@ -1577,7 +1577,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/9af54070-924d-4b8c-914a-ab42dffe1d29?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/9af54070-924d-4b8c-914a-ab42dffe1d29?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"status\": \"Succeeded\"\r\n}"
@@ -1627,7 +1627,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"name\": \"clitestvnet\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet\",\r\n
@@ -1696,7 +1696,7 @@ interactions:
       accept-language:
       - en-US
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"name\": \"clitestvnet\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet\",\r\n
@@ -1776,7 +1776,7 @@ interactions:
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"name\": \"clitestvnet\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet\",\r\n
@@ -1804,7 +1804,7 @@ interactions:
         false,\r\n    \"enableVmProtection\": false\r\n  }\r\n}"
     headers:
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/23376af9-d7d9-4312-8ba6-31a235a185bd?api-version=2019-11-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/23376af9-d7d9-4312-8ba6-31a235a185bd?api-version=2020-03-01
       cache-control:
       - no-cache
       content-length:
@@ -1852,7 +1852,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/23376af9-d7d9-4312-8ba6-31a235a185bd?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/23376af9-d7d9-4312-8ba6-31a235a185bd?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"status\": \"Succeeded\"\r\n}"
@@ -1902,7 +1902,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"name\": \"clitestvnet\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet\",\r\n
@@ -2327,7 +2327,7 @@ interactions:
       accept-language:
       - en-US
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"name\": \"clitestvnet\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet\",\r\n
@@ -2423,7 +2423,7 @@ interactions:
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"name\": \"clitestvnet\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet\",\r\n
@@ -2462,7 +2462,7 @@ interactions:
         false,\r\n    \"enableVmProtection\": false\r\n  }\r\n}"
     headers:
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/e8d46be5-2d84-4692-8519-3a1da86b1ae8?api-version=2019-11-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/e8d46be5-2d84-4692-8519-3a1da86b1ae8?api-version=2020-03-01
       cache-control:
       - no-cache
       content-length:
@@ -2510,7 +2510,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/e8d46be5-2d84-4692-8519-3a1da86b1ae8?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/e8d46be5-2d84-4692-8519-3a1da86b1ae8?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"status\": \"Succeeded\"\r\n}"
@@ -2560,7 +2560,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"name\": \"clitestvnet\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet\",\r\n
@@ -3195,7 +3195,7 @@ interactions:
       accept-language:
       - en-US
     method: DELETE
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/clitestvnet?api-version=2020-03-01
   response:
     body:
       string: ''
@@ -3203,7 +3203,7 @@ interactions:
       azure-asyncnotification:
       - Enabled
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/fa47d05c-6db1-4128-8edf-545d311aa201?api-version=2019-11-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/fa47d05c-6db1-4128-8edf-545d311aa201?api-version=2020-03-01
       cache-control:
       - no-cache
       content-length:
@@ -3213,7 +3213,7 @@ interactions:
       expires:
       - '-1'
       location:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operationResults/fa47d05c-6db1-4128-8edf-545d311aa201?api-version=2019-11-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operationResults/fa47d05c-6db1-4128-8edf-545d311aa201?api-version=2020-03-01
       pragma:
       - no-cache
       server:
@@ -3247,7 +3247,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/fa47d05c-6db1-4128-8edf-545d311aa201?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/fa47d05c-6db1-4128-8edf-545d311aa201?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"status\": \"Succeeded\"\r\n}"
@@ -3982,7 +3982,7 @@ interactions:
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000003?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000003?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"name\": \"cli-vnet-000003\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000003\",\r\n
@@ -4005,7 +4005,7 @@ interactions:
       azure-asyncnotification:
       - Enabled
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/a43de03a-3598-4e04-a56c-f0b0c6df7f59?api-version=2019-11-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/a43de03a-3598-4e04-a56c-f0b0c6df7f59?api-version=2020-03-01
       cache-control:
       - no-cache
       content-length:
@@ -4049,7 +4049,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/a43de03a-3598-4e04-a56c-f0b0c6df7f59?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/a43de03a-3598-4e04-a56c-f0b0c6df7f59?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"status\": \"InProgress\"\r\n}"
@@ -4099,7 +4099,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/a43de03a-3598-4e04-a56c-f0b0c6df7f59?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/a43de03a-3598-4e04-a56c-f0b0c6df7f59?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"status\": \"InProgress\"\r\n}"
@@ -4149,7 +4149,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/a43de03a-3598-4e04-a56c-f0b0c6df7f59?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/a43de03a-3598-4e04-a56c-f0b0c6df7f59?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"status\": \"Succeeded\"\r\n}"
@@ -4199,7 +4199,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000003?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000003?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"name\": \"cli-vnet-000003\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000003\",\r\n
@@ -4268,7 +4268,7 @@ interactions:
       accept-language:
       - en-US
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000003/subnets/cli-subnet-000004?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000003/subnets/cli-subnet-000004?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"name\": \"cli-subnet-000004\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000003/subnets/cli-subnet-000004\",\r\n
@@ -4333,7 +4333,7 @@ interactions:
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000003/subnets/cli-subnet-000004?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000003/subnets/cli-subnet-000004?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"name\": \"cli-subnet-000004\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000003/subnets/cli-subnet-000004\",\r\n
@@ -4344,7 +4344,7 @@ interactions:
         \"Microsoft.Network/virtualNetworks/subnets\"\r\n}"
     headers:
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/99d2d42e-f15b-4ac8-99b7-c691675838ba?api-version=2019-11-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/99d2d42e-f15b-4ac8-99b7-c691675838ba?api-version=2020-03-01
       cache-control:
       - no-cache
       content-length:
@@ -4392,7 +4392,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/99d2d42e-f15b-4ac8-99b7-c691675838ba?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/99d2d42e-f15b-4ac8-99b7-c691675838ba?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"status\": \"Succeeded\"\r\n}"
@@ -4442,7 +4442,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000003/subnets/cli-subnet-000004?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000003/subnets/cli-subnet-000004?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"name\": \"cli-subnet-000004\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000003/subnets/cli-subnet-000004\",\r\n
@@ -4606,7 +4606,7 @@ interactions:
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/privateEndpoints/cli-pe-000005?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/privateEndpoints/cli-pe-000005?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"name\": \"cli-pe-000005\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/privateEndpoints/cli-pe-000005\",\r\n
@@ -4630,7 +4630,7 @@ interactions:
       azure-asyncnotification:
       - Enabled
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/7b1af843-af32-4c6c-a8c3-01f3d6129bbd?api-version=2019-11-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/7b1af843-af32-4c6c-a8c3-01f3d6129bbd?api-version=2020-03-01
       cache-control:
       - no-cache
       content-length:
@@ -4675,7 +4675,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/7b1af843-af32-4c6c-a8c3-01f3d6129bbd?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/7b1af843-af32-4c6c-a8c3-01f3d6129bbd?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"status\": \"InProgress\"\r\n}"
@@ -4726,7 +4726,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/7b1af843-af32-4c6c-a8c3-01f3d6129bbd?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/7b1af843-af32-4c6c-a8c3-01f3d6129bbd?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"status\": \"InProgress\"\r\n}"
@@ -4777,7 +4777,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/7b1af843-af32-4c6c-a8c3-01f3d6129bbd?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/7b1af843-af32-4c6c-a8c3-01f3d6129bbd?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"status\": \"InProgress\"\r\n}"
@@ -4828,7 +4828,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/7b1af843-af32-4c6c-a8c3-01f3d6129bbd?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/7b1af843-af32-4c6c-a8c3-01f3d6129bbd?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"status\": \"InProgress\"\r\n}"
@@ -4879,7 +4879,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/7b1af843-af32-4c6c-a8c3-01f3d6129bbd?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/7b1af843-af32-4c6c-a8c3-01f3d6129bbd?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"status\": \"Succeeded\"\r\n}"
@@ -4930,7 +4930,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/privateEndpoints/cli-pe-000005?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/privateEndpoints/cli-pe-000005?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"name\": \"cli-pe-000005\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/privateEndpoints/cli-pe-000005\",\r\n
@@ -5407,7 +5407,7 @@ interactions:
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/privateEndpoints/cli-pe-000006?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/privateEndpoints/cli-pe-000006?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"name\": \"cli-pe-000006\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/privateEndpoints/cli-pe-000006\",\r\n
@@ -5431,7 +5431,7 @@ interactions:
       azure-asyncnotification:
       - Enabled
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/c1d40f78-3794-4a3f-bf9b-930e18fae707?api-version=2019-11-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/c1d40f78-3794-4a3f-bf9b-930e18fae707?api-version=2020-03-01
       cache-control:
       - no-cache
       content-length:
@@ -5476,7 +5476,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/c1d40f78-3794-4a3f-bf9b-930e18fae707?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/c1d40f78-3794-4a3f-bf9b-930e18fae707?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"status\": \"InProgress\"\r\n}"
@@ -5527,7 +5527,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/c1d40f78-3794-4a3f-bf9b-930e18fae707?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/c1d40f78-3794-4a3f-bf9b-930e18fae707?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"status\": \"Succeeded\"\r\n}"
@@ -5578,7 +5578,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/privateEndpoints/cli-pe-000006?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/privateEndpoints/cli-pe-000006?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"name\": \"cli-pe-000006\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/privateEndpoints/cli-pe-000006\",\r\n
@@ -6154,7 +6154,7 @@ interactions:
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/privateEndpoints/cli-pe-000007?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/privateEndpoints/cli-pe-000007?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"name\": \"cli-pe-000007\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/privateEndpoints/cli-pe-000007\",\r\n
@@ -6178,7 +6178,7 @@ interactions:
       azure-asyncnotification:
       - Enabled
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/61d3e678-4903-44b4-b9c4-3dcf3f4ae4a9?api-version=2019-11-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/61d3e678-4903-44b4-b9c4-3dcf3f4ae4a9?api-version=2020-03-01
       cache-control:
       - no-cache
       content-length:
@@ -6223,7 +6223,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/61d3e678-4903-44b4-b9c4-3dcf3f4ae4a9?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/61d3e678-4903-44b4-b9c4-3dcf3f4ae4a9?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"status\": \"InProgress\"\r\n}"
@@ -6274,7 +6274,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/61d3e678-4903-44b4-b9c4-3dcf3f4ae4a9?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/61d3e678-4903-44b4-b9c4-3dcf3f4ae4a9?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"status\": \"InProgress\"\r\n}"
@@ -6325,7 +6325,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/61d3e678-4903-44b4-b9c4-3dcf3f4ae4a9?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/61d3e678-4903-44b4-b9c4-3dcf3f4ae4a9?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"status\": \"Succeeded\"\r\n}"
@@ -6376,7 +6376,7 @@ interactions:
       - python/3.7.0 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/privateEndpoints/cli-pe-000007?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/privateEndpoints/cli-pe-000007?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"name\": \"cli-pe-000007\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/privateEndpoints/cli-pe-000007\",\r\n

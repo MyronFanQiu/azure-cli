@@ -23,7 +23,7 @@ interactions:
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000001/providers/Microsoft.Network/publicIPAddresses/cliaksslbip1000002?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000001/providers/Microsoft.Network/publicIPAddresses/cliaksslbip1000002?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"name\": \"cliaksslbip1000002\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000001/providers/Microsoft.Network/publicIPAddresses/cliaksslbip1000002\"\
@@ -36,7 +36,7 @@ interactions:
         : {\r\n    \"name\": \"Standard\"\r\n  }\r\n}"
     headers:
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus2/operations/9a1a9211-d336-4a68-98bf-034c352c3d57?api-version=2019-11-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus2/operations/9a1a9211-d336-4a68-98bf-034c352c3d57?api-version=2020-03-01
       cache-control:
       - no-cache
       content-length:
@@ -80,7 +80,7 @@ interactions:
       - python/3.6.4 (Linux-5.3.0-40-generic-x86_64-with) msrest/0.6.11 msrest_azure/0.6.2
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus2/operations/9a1a9211-d336-4a68-98bf-034c352c3d57?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus2/operations/9a1a9211-d336-4a68-98bf-034c352c3d57?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"status\": \"Succeeded\"\r\n}"
@@ -130,7 +130,7 @@ interactions:
       - python/3.6.4 (Linux-5.3.0-40-generic-x86_64-with) msrest/0.6.11 msrest_azure/0.6.2
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000001/providers/Microsoft.Network/publicIPAddresses/cliaksslbip1000002?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000001/providers/Microsoft.Network/publicIPAddresses/cliaksslbip1000002?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"name\": \"cliaksslbip1000002\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000001/providers/Microsoft.Network/publicIPAddresses/cliaksslbip1000002\"\
@@ -196,7 +196,7 @@ interactions:
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000001/providers/Microsoft.Network/publicIPAddresses/cliaksslbip2000003?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000001/providers/Microsoft.Network/publicIPAddresses/cliaksslbip2000003?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"name\": \"cliaksslbip2000003\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000001/providers/Microsoft.Network/publicIPAddresses/cliaksslbip2000003\"\
@@ -209,7 +209,7 @@ interactions:
         : {\r\n    \"name\": \"Standard\"\r\n  }\r\n}"
     headers:
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus2/operations/fc8830b3-dc79-409f-9784-345e31d34819?api-version=2019-11-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus2/operations/fc8830b3-dc79-409f-9784-345e31d34819?api-version=2020-03-01
       cache-control:
       - no-cache
       content-length:
@@ -253,7 +253,7 @@ interactions:
       - python/3.6.4 (Linux-5.3.0-40-generic-x86_64-with) msrest/0.6.11 msrest_azure/0.6.2
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus2/operations/fc8830b3-dc79-409f-9784-345e31d34819?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus2/operations/fc8830b3-dc79-409f-9784-345e31d34819?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"status\": \"Succeeded\"\r\n}"
@@ -303,7 +303,7 @@ interactions:
       - python/3.6.4 (Linux-5.3.0-40-generic-x86_64-with) msrest/0.6.11 msrest_azure/0.6.2
         azure-mgmt-network/10.0.0 Azure-SDK-For-Python AZURECLI/2.2.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000001/providers/Microsoft.Network/publicIPAddresses/cliaksslbip2000003?api-version=2019-11-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000001/providers/Microsoft.Network/publicIPAddresses/cliaksslbip2000003?api-version=2020-03-01
   response:
     body:
       string: "{\r\n  \"name\": \"cliaksslbip2000003\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000001/providers/Microsoft.Network/publicIPAddresses/cliaksslbip2000003\"\

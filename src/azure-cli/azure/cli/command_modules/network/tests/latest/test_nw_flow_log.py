@@ -122,7 +122,7 @@ class NWFlowLogScenarioTest(ScenarioTest):
             'watcher_rg': 'NetworkWatcherRG',
             'watcher_name': 'NetworkWatcher_{}'.format(resource_group_location),
             'flow_log': 'flow_log_test2',
-            'workspace': 'clitest20200403',
+            'workspace': 'clitest2020040802',
         })
 
         # enable network watcher
@@ -169,7 +169,9 @@ class NWFlowLogScenarioTest(ScenarioTest):
             self.check('enabled', True),
             self.check('format.type', 'JSON'),
             self.check('format.version', 1),
-            self.check('flowAnalyticsConfiguration.networkWatcherFlowAnalyticsConfiguration', None),
+            self.check('flowAnalyticsConfiguration.networkWatcherFlowAnalyticsConfiguration.enabled', False),
+            self.check('flowAnalyticsConfiguration.networkWatcherFlowAnalyticsConfiguration.workspaceResourceId',
+                       self.kwargs['workspace_id']),
             self.check('retentionPolicy.days', 0),
             self.check('retentionPolicy.enabled', False)
         ])
